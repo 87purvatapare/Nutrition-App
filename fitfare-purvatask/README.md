@@ -135,7 +135,8 @@ Technologies Used: React, Node.js, Express.js, MySQL, JWT
 This project was built as part of the Fit-Fare initiative to promote health and nutrition through technology.
 Special thanks to all contributors, mentors, and team members who supported this project’s development journey.
 
-Frontend Development: Purva Tapare
+Frontend Development: Prerna 
+
 
 Backend Integration: Fit-Fare Dev Team
 
