@@ -1,0 +1,292 @@
+/* ---------- Fullscreen Layout ---------- */
+.allergy-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Inter", "Poppins", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ---------- Center Card ---------- */
+.allergy-card {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 102, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+/* ---------- Logo ---------- */
+.allergy-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  /* border: 2px solid #0066ff; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+/* ---------- Title ---------- */
+.allergy-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+/* ---------- Chips ---------- */
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.chip:hover {
+  border-color: #0066ff;
+  background-color: #f0f7ff;
+}
+
+.chip.selected {
+  color: #000;
+  border-color: #0066ff;
+  box-shadow: 0 13px 10px rgba(0, 102, 255, 0.25);
+}
+
+.chip-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.chip-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.note-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ---------- Modal Header Layout ---------- */
+.modal-header {
+  display: flex;
+  justify-content: center; /* horizontally centers the group */
+  gap: 8px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ---------- Icon Styling ---------- */
+.modal-icon {
+  font-size: 30px;
+  color: red; /* yellow-orange warning color */
+  flex-shrink: 0; /* prevents resizing */
+}
+
+/* ---------- Title Text Styling ---------- */
+.modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px;
+  margin-left: -20px;
+  margin-right: -12px;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+/* ---------- Separator Line ---------- */
+.line {
+  width: 80%;
+  height: 2px;
+  background-color: #000;
+  margin: 20px 0;
+  opacity: 0.4;
+  border-radius: 2px;
+}
+
+/* ---------- Note ---------- */
+.note {
+  font-size: 15px;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.note-icon {
+  color: #0066ff;
+  font-size: 18px;
+}
+
+/* ---------- Continue Button ---------- */
+.continue-btn11 {
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 102, 255, 0.25);
+}
+
+.continue-btn11:hover {
+  background-color: #0052cc;
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+}
+
+/* ---------- Responsive: Large Tablets ---------- */
+@media (max-width: 992px) {
+  .allergy-card {
+    padding: 40px 30px;
+    max-width: 500px;
+  }
+
+  .allergy-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .allergy-card h2 {
+    font-size: 24px;
+  }
+}
+
+/* ---------- Responsive: Tablets ---------- */
+@media (max-width: 768px) {
+  .allergy-card {
+    padding: 35px 25px;
+  }
+
+  .allergy-logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .allergy-card h2 {
+    font-size: 22px;
+  }
+
+  .chip {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .continue-btn11 {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* ---------- Responsive: Phones ---------- */
+@media (max-width: 576px) {
+  .allergy-card {
+    padding: 28px 20px;
+  }
+
+  .allergy-card h2 {
+    font-size: 20px;
+  }
+
+  .chip {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .continue-btn11 {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Responsive: Small Phones ---------- */
+@media (max-width: 400px) {
+  .allergy-card {
+    padding: 22px 16px;
+  }
+
+  .allergy-card h2 {
+    font-size: 18px;
+  }
+
+  .allergy-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .chip {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .continue-btn11 {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,230 @@
+/* ---------- Page Layout ---------- */
+.food-page {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Inter", "Poppins", sans-serif;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* ---------- Dialog Box ---------- */
+.food-dialog-box {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 35px 45px;
+  width: 90%;
+  max-width: 460px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------- Logo ---------- */
+.food-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
+  /* border: 2px solid #0066ff; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+/* ---------- Heading ---------- */
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+/* ---------- Options ---------- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.option {
+  border: 1.5px solid #d9d9d9;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  width: 100%;
+  max-width: 360px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.option:hover {
+  border-color: #0066ff;
+  color: #000000;
+}
+
+.option.selected {
+  border: 1.5px solid #0066ff;
+  background-color: #f0f6ff;
+  font-weight: 600;
+  color: #0066ff;
+  box-shadow: 0 0 6px rgba(0, 102, 255, 0.25);
+}
+
+/* ---------- Custom Radio ---------- */
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #0066ff;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.option.selected .custom-radio {
+  background-color: #0066ff;
+  border: none;
+}
+
+.check-icon {
+  color: white;
+  font-size: 12px;
+}
+/* ---------- Icon Images ---------- */
+.option-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ---------- Checkmark Image ---------- */
+.check-img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+
+/* ---------- Icon Box ---------- */
+.icon-box {
+  font-size: 20px;
+  color: #0066ff;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-text {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 15px;
+  color: #000000;
+}
+
+/* ---------- Continue Button ---------- */
+.continue-button {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 360px;
+  font-weight: 500;
+  height: 48px;
+}
+
+.continue-button:hover {
+  background-color: #004de6;
+}
+
+/* ---------- Responsive: Tablets ---------- */
+@media (max-width: 992px) {
+  .food-dialog-box {
+    padding: 32px 30px;
+    max-width: 420px;
+  }
+
+  .heading {
+    font-size: 23px;
+  }
+
+  .option,
+  .continue-button {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media (max-width: 768px) {
+  .food-dialog-box {
+    padding: 28px 22px;
+    width: 92%;
+  }
+
+  .food-logo {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 16px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .option,
+  .continue-button {
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .option-text {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Responsive: Small Devices (Phones under 480px) ---------- */
+@media (max-width: 480px) {
+  .food-dialog-box {
+    padding: 22px 18px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .option,
+  .continue-button {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .food-logo {
+    width: 55px;
+    height: 55px;
+  }
+}  

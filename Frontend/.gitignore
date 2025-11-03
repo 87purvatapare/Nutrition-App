@@ -1,0 +1,25 @@
+# node_modules
+# .env 
+
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+log.txt
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build folders
+dist/
+build/

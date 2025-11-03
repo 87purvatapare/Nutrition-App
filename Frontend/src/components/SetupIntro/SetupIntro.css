@@ -1,0 +1,239 @@
+/* ---------- Page Base ---------- */
+.setup-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Inter", "Poppins", sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ---------- Subtle Overlay ---------- */
+.setup-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(1.2px); /* ✅ Safari support */
+  backdrop-filter: blur(1.2px);
+  background: rgba(255, 255, 255, 1);
+
+  
+  z-index: 0;
+}
+
+
+/* ---------- Overlay Layout ---------- */
+.overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Dialog Box ---------- */
+.dialog-box {
+  background: rgba(255, 255, 255, 0.85);
+
+  border-radius: 24px;
+  padding: 60px 80px;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+}
+
+/* ---------- Logo ---------- */
+.setup-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.9px;
+  /* border: 2px solid #0066ff; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+/* ---------- Heading ---------- */
+.dialog-heading {
+  font-size: 40px;
+  color: #0d0d0d;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #0056ff;
+}
+
+/* ---------- Text ---------- */
+.dialog-text {
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+/* ---------- Edit Icon (Replaces Pencil) ---------- */
+.edit-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-left: 8px;
+  object-fit: contain;
+}
+
+/* ---------- Buttons Section ---------- */
+.button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.btn {
+  width: 260px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* ---------- Button Styles ---------- */
+.btn.primary {
+  background-color: #0056ff;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 86, 255, 0.3);
+}
+
+.btn.primary:hover {
+  background-color: #0046d6;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #0056ff;
+  color: #1a1a1a;
+}
+
+.btn.outline:hover {
+  background-color: #0056ff;
+  color: #fff;
+}
+
+.btn.danger {
+  background-color: #ff4b4b;
+  color: #fff;
+}
+
+.btn.danger:hover {
+  background-color: #e63939;
+}
+
+/* ---------- Tablet Responsive ---------- */
+@media (max-width: 1024px) {
+  .dialog-box {
+    max-width: 600px;
+    padding: 50px 60px;
+  }
+
+  .dialog-heading {
+    font-size: 34px;
+  }
+
+  .dialog-text {
+    font-size: 17px;
+  }
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
+  .dialog-box {
+    padding: 40px 30px;
+    width: 90%;
+  }
+
+  .setup-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 16px;
+  }
+
+  .dialog-heading {
+    font-size: 28px;
+  }
+
+  .dialog-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+}
+
+/* ---------- Small Mobile Devices ---------- */
+@media (max-width: 480px) {
+  .dialog-box {
+    padding: 28px 18px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+
+  .setup-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dialog-heading {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .dialog-text {
+    font-size: 14.5px;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* ---------- Ultra Small Devices ---------- */
+@media (max-width: 360px) {
+  .dialog-heading {
+    font-size: 22px;
+  }
+
+  .dialog-text {
+    font-size: 13.5px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+}
