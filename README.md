@@ -5,15 +5,27 @@
 
 ## 🧠 Overview
 
-**Fit-Fare Nutrition System** is an intelligent health companion that helps users build their personalized nutrition profiles through a simple, step-by-step process.  
-Users can log in, define food preferences, allergies, snack frequency, and calorie intake — all data is securely stored in a **MySQL database** through protected backend APIs.
+**Fit-Fare Nutrition System** is a smart and interactive web application designed to help users build their **personalized nutrition profiles** with ease.  
+Users can log in, select their **food preferences**, list **common allergies**, set **snack frequency**, and define **daily calorie intake** — all data securely stored in a **MySQL database** via protected backend APIs.
+
+---
+
+## 🚀 Key Features
+
+- 🍱 Personalized nutrition tracking  
+- 🧾 User authentication (Signup/Login)  
+- 🔄 Dynamic data management via React Context API  
+- 💾 Secure backend API integration with Express & MySQL  
+- 📊 Centralized profile data storage  
+- 🧠 Easy-to-use multi-step profile setup  
+- 🔐 JWT-based user protection  
 
 ---
 
 ## ⚙️ System Architecture
 
 ### 🖥️ Frontend (React + Context API)
-The frontend is built using React and manages user interactions and navigation across multiple profile setup pages.
+The frontend is developed in **React** and manages all user interactions with a clean UI and smooth navigation flow.
 
 | Component | Functionality |
 |------------|----------------|
@@ -21,15 +33,15 @@ The frontend is built using React and manages user interactions and navigation a
 | `Allergies.jsx` | Choose common food allergies |
 | `SnackFrequency.jsx` | Set snack frequency |
 | `CalorieIntake.jsx` | Define daily calorie goals |
-| `Summary.jsx` | Review and confirm final nutrition profile |
+| `Summary.jsx` | Review and confirm nutrition profile |
 
-All user input is maintained in a **central React state (`profileData`)** via `ProfileContext.jsx`.
+➡️ All user input is stored in a **central state (`profileData`)** using `ProfileContext.jsx`.
 
 ---
 
 ### 💾 Backend (Node.js + Express + MySQL)
 
-Handles authentication, validation, and secure data storage.
+The backend handles **authentication**, **data validation**, and **secure storage** through API endpoints.
 
 #### 🔐 Authentication Routes
 | Method | Route | Description |
@@ -47,21 +59,11 @@ Handles authentication, validation, and secure data storage.
 
 ## 🔁 Data Flow (End-to-End)
 
-### Step 1: User Login  
-- User logs in at `/login`.  
-- JWT token is generated and stored in `localStorage`.  
-
-### Step 2: Profile Creation  
-- Users fill out their nutrition details step-by-step.  
-- Data is updated in `ProfileContext.jsx` using `updateProfileData()`.  
-
-### Step 3: Submission  
-- `submitProfile()` sends complete profile data and JWT token to backend via `POST /api/profile`.
-
-### Step 4: Database Handling  
-- `authMiddleware.js` verifies the token and extracts `user_id`.  
-- `profileController.js` invokes `createOrUpdateProfile()` from `profileModel.js`.  
-- Data is stored in MySQL `user_profiles` table.
+1. **User Login** — User logs in at `/login`, JWT token generated and stored in `localStorage`.  
+2. **Profile Creation** — Users fill nutrition details step-by-step using form components.  
+3. **State Update** — `ProfileContext.jsx` updates user data via `updateProfileData()`.  
+4. **Submission** — On final step, `submitProfile()` sends complete data to backend using `POST /api/profile`.  
+5. **Database Handling** — `authMiddleware.js` verifies token, and `profileController.js` stores data in `user_profiles` table.
 
 ---
 
@@ -80,7 +82,7 @@ Handles authentication, validation, and secure data storage.
 | `id` | INT (PK) | Profile ID |
 | `user_id` | INT (FK) | Linked user ID |
 | `food_preference` | VARCHAR(100) | e.g. "Vegetarian" |
-| `common_allergies` | JSON | e.g. ["Peanut", "Egg"] |
+| `common_allergies` | JSON | e.g. ["Peanut", "Gluten"] |
 | `snack_frequency` | VARCHAR(50) | e.g. "Twice" |
 | `calorie_intake` | INT | e.g. 2000 |
 | `other_notes` | TEXT | Additional notes |
@@ -91,22 +93,24 @@ Handles authentication, validation, and secure data storage.
 
 | File | Description |
 |------|--------------|
-| `AuthContext.jsx` | Handles user authentication and JWT storage |
-| `ProfileContext.jsx` | Manages nutrition data across React components |
-| `profileController.js` | Business logic for creating/updating profiles |
-| `profileModel.js` | MySQL queries and data processing |
-| `authMiddleware.js` | JWT verification for protected routes |
-| `db.js` | Database connection setup |
+| `AuthContext.jsx` | Handles authentication and token management |
+| `ProfileContext.jsx` | Manages global nutrition data across React components |
+| `profileController.js` | Business logic for profile creation & updates |
+| `profileModel.js` | MySQL queries and schema handling |
+| `authMiddleware.js` | Verifies JWT for protected routes |
+| `db.js` | Establishes MySQL database connection |
 
 ---
 
 ## 💻 Technologies Used
 
-**Frontend:** React.js, Context API, Axios  
-**Backend:** Node.js, Express.js  
-**Database:** MySQL  
-**Authentication:** JWT (JSON Web Token)  
-**Version Control:** Git & GitHub  
+| Category | Technology |
+|-----------|-------------|
+| **Frontend** | React.js, Context API, Axios |
+| **Backend** | Node.js, Express.js |
+| **Database** | MySQL |
+| **Authentication** | JWT (JSON Web Token) |
+| **Version Control** | Git & GitHub |
 
 ---
 
@@ -121,20 +125,28 @@ Handles authentication, validation, and secure data storage.
   "calorie_intake": 2000,
   "other_notes": "Avoid oily food"
 }
+💡 Future Enhancements
+
+🧮 Automated calorie suggestion system
+
+📱 Mobile-friendly responsive dashboard
+
+📧 Email-based reminders for meal tracking
+
+🩺 AI-powered meal recommendations
+
 🤝 Collaboration & Contributions
 
-***This project was developed under the Fit-Fare Organization to promote digital wellness and personalized nutrition management.
+This project was developed under the Fit-Fare Organization to promote digital wellness and personalized nutrition management.
 💡 We believe collaboration drives innovation!
 
-Special Thanks:
+🙌 Special Thanks:
 
-***🧠 Fit-Fare Dev Team — Backend integration & API development
+🧠 Fit-Fare Dev Team — Backend integration & API development
 
 🎨 UI/UX Design Team — Design guidance & page flow support
 
-💬 Mentors & Reviewers — For valuable feedback and testing
+💬 Mentors & Reviewers — Valuable feedback and testing
 
 If you'd like to contribute or suggest improvements,
 📬 Fork this repository and submit a Pull Request!
-
-<h3 align="center">🌟 Empowering Health Through Technology — Fit-Fare 🌿</h3> 
