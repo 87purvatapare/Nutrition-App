@@ -123,12 +123,12 @@ Handles authentication, validation, and secure data storage.
 }
 🤝 Collaboration & Contributions
 
-This project was developed under the Fit-Fare Organization to promote digital wellness and personalized nutrition management.
+***This project was developed under the Fit-Fare Organization to promote digital wellness and personalized nutrition management.
 💡 We believe collaboration drives innovation!
 
 Special Thanks:
 
-🧠 Fit-Fare Dev Team — Backend integration & API development
+***🧠 Fit-Fare Dev Team — Backend integration & API development
 
 🎨 UI/UX Design Team — Design guidance & page flow support
 
